@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>תוכנית קודקוד</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800;900&display=swap">
+<style>
+  :root { --navy:#012045; --ink:#1d2a44; --ink-title:#031a3e; --accent:#1f5fbf; --card:#f2f8fc; --border:#c3cfe0; --muted:#55637d; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; background:#dfe8f2; font-family:'Heebo',Arial,sans-serif; }
+  .slide { width:1280px; height:720px; margin:20px auto; background:#012045; position:relative; overflow:hidden; color:#eaf3fc; }
+  .text { position:absolute; right:90px; top:56px; width:1000px; }
+  h1 { margin:0 0 26px; font-size:70px; white-space:nowrap; color:#fff; font-weight:900; line-height:1; text-shadow:0 2px 12px rgba(0,16,40,.7); }
+  .sub { margin:14px 0 22px; font-size:34px; font-weight:800; color:var(--accent); }
+  ul { margin:0; padding:0; list-style:none; font-size:30px; line-height:1.5; font-weight:500; }
+  li { padding-right:26px; position:relative; margin-bottom:6px; }
+  li b { font-weight:900; color:#8fc4f2; }
+  .red { color:#ffd84a; font-weight:900; }
+  li::before { content:""; position:absolute; right:0; top:.62em; width:11px; height:11px; border-radius:50%; background:var(--accent); }
+  .photo { position:absolute; left:0; right:0; bottom:0; height:340px; background:url(assets/share/background-bottom.jpg) center bottom / 1280px auto no-repeat; filter:brightness(1.12); -webkit-mask-image:linear-gradient(to top, #000 60%, transparent 100%); mask-image:linear-gradient(to top, #000 60%, transparent 100%); }
+  ul { text-shadow:0 2px 10px rgba(0,16,40,.7); }
+  svg { display:block; width:100%; height:100%; overflow:visible; }
+  .gap { color:#b3261e; font-weight:700; }
+</style>
+<link rel="stylesheet" href="nav.css">
+</head>
+<body>
+<section class="slide">
+  <div class="photo"></div>
+  <div class="text">
+    <h1>תוכנית קודקוד</h1>
+    <ul>
+      <li><b>התחלה:</b><span> 2022</span></li>
+      <li><b>מתנגדים:</b><span> יחידה 8200 ("למה אנחנו צריכים אותם?", ענבר הרוש גיטי, מכון הרטמן, 22.9.2024), <span class="red">רבני והנהגת הציבור החרדי</span></span></li>
+      <li><b>כמות התחלה:</b><span> 86</span></li>
+      <li><b>כמות כיום:</b><span> כ-1,000 חיילים (ג'רוזלם פוסט, 14.10.2026)</span></li>
+      <li><b>יחידה:</b><span> <span class="red">8200</span></span></li>
+      <li><b>גורם מאשר:</b><span> שר הביטחון בני גנץ, 2020</span></li>
+    </ul>
+  </div>
+</section>
+<script>
+  function fit() {
+    const s = Math.min(window.innerWidth / 1300, window.innerHeight / 760);
+    const el = document.querySelector('.slide');
+    el.style.transformOrigin = 'top left';
+    el.style.transform = 'scale(' + s + ')';
+    el.style.margin = '0';
+    el.style.position = 'absolute';
+    el.style.left = Math.max(0, (window.innerWidth - 1280 * s) / 2) + 'px';
+    el.style.top = Math.max(0, (window.innerHeight - 720 * s) / 2) + 'px';
+    document.body.style.overflow = 'hidden';
+  }
+  fit(); window.addEventListener('resize', fit);
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

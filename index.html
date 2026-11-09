@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>אחותי את</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@800;900&display=swap">
+<style>
+  @font-face { font-family: GuttmanStam; src: url(assets/share/GuttmanStam.woff) format('woff'); }
+  * { margin:0; box-sizing:border-box; }
+  html,body { background:#dfe8f2; font-family:Heebo,sans-serif; }
+  .slide { width:1280px; height:720px; margin:20px auto; background:#012045; position:relative; overflow:hidden; color:#fff; }
+  .photo { position:absolute; inset:0; background:url(assets/share/background-bottom.jpg) center bottom / cover no-repeat; filter:brightness(1.12); }
+  .shade { position:absolute; inset:0; background:linear-gradient(to left, rgba(1,32,69,.88) 0%, rgba(1,32,69,.80) 50%, rgba(1,32,69,.45) 68%, rgba(1,32,69,.05) 100%); }
+  .box { position:absolute; right:60px; top:48px; width:750px; white-space:nowrap; text-shadow:0 2px 12px rgba(0,16,40,.7); transform:scale(1.07); transform-origin:top right; }
+  .verse { font:36px GuttmanStam; color:#cfe3fb; }
+  .wordmark { font:150px/1.15 GuttmanStam; color:#fff; margin:2px 0 4px; }
+  .l1 { font-weight:900; font-size:73px; line-height:1.1; color:#8fc4f2; margin-top:36px; }
+  .l2 { font-weight:900; font-size:54px; line-height:1.25; }
+  .l3 { font-weight:800; font-size:46px; line-height:1.25; color:#eaf3fc; }
+</style>
+<link rel="stylesheet" href="nav.css">
+</head>
+<body>
+<section class="slide">
+  <div class="photo"></div><div class="shade"></div>
+  <div class="box">
+    <div class="verse">אֱמֹ֣ר לַ֭חׇכְמָה</div>
+    <div class="wordmark">אֲחֹ֣תִי אָ֑תְּ</div>
+    <div class="l1">יוזמה</div>
+    <div class="l2">להקמת מסגרת תורנית</div>
+    <div class="l3">לשירות בנות דתיות ציוניות<br>ביחידת המודיעין 8200</div>
+  </div>
+</section>
+<script>
+  function fit() {
+    const s = Math.min(window.innerWidth / 1300, window.innerHeight / 760);
+    const el = document.querySelector('.slide');
+    el.style.transformOrigin = 'top left';
+    el.style.transform = 'scale(' + s + ')';
+    el.style.margin = '0';
+    el.style.position = 'absolute';
+    el.style.left = Math.max(0, (window.innerWidth - 1280 * s) / 2) + 'px';
+    el.style.top = Math.max(0, (window.innerHeight - 720 * s) / 2) + 'px';
+    document.body.style.overflow = 'hidden';
+  }
+  fit(); window.addEventListener('resize', fit);
+</script>
+<script src="nav.js"></script>
+</body>
+</html>
