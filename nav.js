@@ -48,6 +48,7 @@
   });
   var count = document.createElement('span');
   count.className = 'dn-count';
+  count.setAttribute('dir', 'ltr');
   count.textContent = (cur + 1) + ' / ' + pages.length;
   bar.appendChild(count);
   nav.appendChild(bar);

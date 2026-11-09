@@ -1,3 +1,4 @@
+html, body { background: #00132b !important; }
 /* Lilach deck navigation (see nav.js) */
 .dn { position: fixed; inset: 0; z-index: 1000; pointer-events: none; transition: opacity .35s; }
 .dn.dn-idle { opacity: 0; }
@@ -26,7 +27,7 @@
 .dn-dot { width: 11px; height: 11px; border-radius: 50%; background: rgba(255, 255, 255, .45); transition: transform .15s, background .15s; }
 .dn-dot:hover { background: #fff; transform: scale(1.3); }
 .dn-dot.dn-cur { background: #8fc4f2; transform: scale(1.35); box-shadow: 0 0 0 2px rgba(143, 196, 242, .35); }
-.dn-count { margin-inline-start: 6px; padding-inline-start: 10px; border-inline-start: 1px solid rgba(255, 255, 255, .3); letter-spacing: .5px; }
+.dn-count { unicode-bidi: isolate; direction: ltr; margin-inline-start: 6px; padding-inline-start: 10px; border-inline-start: 1px solid rgba(255, 255, 255, .3); letter-spacing: .5px; }
 
 @media (max-width: 640px) {
   .dn-edge { width: 44px; height: 44px; margin-top: -22px; }
