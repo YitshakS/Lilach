@@ -2,6 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>הצעה: פיילוט ב-8200</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800;900&display=swap">
 <style>
@@ -51,7 +52,10 @@
     el.style.top = Math.max(0, (window.innerHeight - 720 * s) / 2) + 'px';
     document.body.style.overflow = 'hidden';
   }
-  fit(); window.addEventListener('resize', fit);
+  fit(); window.addEventListener('resize', fit); window.addEventListener('load', fit);
+  window.addEventListener('orientationchange', function () { setTimeout(fit, 150); setTimeout(fit, 600); });
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', fit);
+  setTimeout(fit, 250); setTimeout(fit, 1000);
 </script>
 <script src="nav.js"></script>
 </body>
