@@ -9,8 +9,10 @@
     { href: '4.html', title: 'דף העצומה' },
     { href: '5.html',  title: 'תגובות הבנות' },
     { href: '6.html', title: 'הצעה: פיילוט' },
-    { href: '7.html',      title: 'מה מבקשים' },
-    { href: '8.html', title: 'לוח זמנים' }
+    { href: '7.html', title: 'ליווי הלכתי' },
+    { href: '8.html', title: 'מי עושה מה' },
+    { href: '9.html', title: 'מה מבקשים' },
+    { href: '10.html', title: 'לוח זמנים' }
   ];
   var file = decodeURIComponent(location.pathname.split('/').pop() || 'index.html');
   var cur = 0;
