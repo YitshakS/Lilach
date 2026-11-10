@@ -3,11 +3,14 @@
 (function () {
   var pages = [
     { href: 'index.html',    title: 'פתיחה' },
-    { href: 'hesder.html',   title: 'מסלול הסדר' },
-    { href: 'hadasim.html',  title: 'תוכנית הדסים' },
-    { href: 'kodkod.html',   title: 'תוכנית קודקוד' },
-    { href: 'petition.html', title: 'דף העצומה' },
-    { href: 'replies.html',  title: 'תגובות הבנות' }
+    { href: '1.html',   title: 'מסלול הסדר' },
+    { href: '2.html',  title: 'תוכנית הדסים' },
+    { href: '3.html',   title: 'תוכנית קודקוד' },
+    { href: '4.html', title: 'דף העצומה' },
+    { href: '5.html',  title: 'תגובות הבנות' },
+    { href: '6.html', title: 'הצעה: פיילוט' },
+    { href: '7.html',      title: 'מה מבקשים' },
+    { href: '8.html', title: 'לוח זמנים' }
   ];
   var file = decodeURIComponent(location.pathname.split('/').pop() || 'index.html');
   var cur = 0;
